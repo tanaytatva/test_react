@@ -151,7 +151,6 @@ export default class AddQuestionPopup extends Component {
     callQuestionApi
       .then(function(response) {
         if(response.status === 200){
-          self.resetQuestionForm();
           self.props.renderQuestion(
             response.data,
             isObjectEmpty(self.props.editObject) ? 'insert' : 'replace'

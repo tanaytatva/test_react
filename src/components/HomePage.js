@@ -152,7 +152,6 @@ export default class HomePage extends Component {
                   <th>Frequency</th>
                   <th>Type</th>
                   <th>Role</th>
-                  <th>Required</th>
                   <th>Condition</th>
                   <th>Mapping</th>
                   <th>Actions</th>
@@ -166,10 +165,9 @@ export default class HomePage extends Component {
                   <td>{question.appear}</td>
                   <td>{question.frequency}</td>
                   <td>{question.question_type}</td>
-                  <td>{question.role.name}</td>
-                  <td>{question.is_required}</td>
+                  <td>{question.role === undefined ? '-' : question.role.name}</td>
                   <td>{question.conditions}</td>
-                  <td>{question.mapping.mapping_name}</td>
+                  <td>{question.mapping === undefined ? '-' : question.mapping.mapping_name}</td>
                   <td>
                     <a
                       className="edit-icon"
